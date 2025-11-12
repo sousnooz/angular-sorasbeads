@@ -1,0 +1,56 @@
+{
+  "product": [
+    {
+      "categoryName": "Fragrances",
+      "products": [
+        {
+          "id": 1,
+          "name": "Yves Saint Laurent Y Eau de Parfum",
+          "description": "Woody Aromatic • Apple, Bergamot, Ginger",
+          "categoryName": "Fragrances",
+          "imageFile": "assets/products/saintlaurent.avif",
+          "price": "8700",
+          "unitOfMeasure": "100ml"
+        },
+        {
+          "id": 2,
+          "name": "Bleu de Chanel Eau de Parfum",
+          "description": "Aromatic-woody fragrance • Citrus, lemon zest, mint",
+          "categoryName": "Fragrances",
+          "imageFile": "assets/products/bleuchanel.avif",
+          "price": "4000",
+          "unitOfMeasure": "100ml"
+        }
+      ]
+    },
+    {
+      "categoryName": "Discovery Sets",
+      "products": [
+        {
+          "id": 3,
+          "name": "Versace Eros Flame",
+          "description": "Mint leaves, green apple, and Italian lemon zest",
+          "categoryName": "Discovery Sets",
+          "imageFile": "assets/products/eros.jpg",
+          "price": "5200",
+          "unitOfMeasure": "100ml"
+        }
+      ]
+    }
+  ],
+  "orderitem": [
+    {
+      "productId": 5,
+      "productName": "Pink Lotus Keychain",
+      "productDescription": "Carry tranquility wherever you gor",
+      "productCategoryName": "Keychains",
+      "productUnitOfMeasure": "100ml",
+      "productImageFile": "../../assets/products/pink-lotus.PNG",
+      "price": 70,
+      "quantity": 1,
+      "status": 1,
+      "customerId": 1,
+      "id": 1
+    }
+  ]
+}

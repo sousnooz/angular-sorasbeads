@@ -1,0 +1,337 @@
+.cart-container {
+  width: 85%;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 30px;
+  box-shadow: 0 4px 25px rgba(68, 80, 116, 0.1);
+  border-radius: 16px;
+}
+
+h2 {
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: #445074;
+  margin-bottom: 50px;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.cart-table th, .cart-table td {
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  padding: 16px 10px;
+  border-bottom: 1px solid #e8ecf0;
+  font-weight: 400;
+  color: #445074;
+  vertical-align: middle;
+}
+
+.cart-table th {
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  background-color: #f8f9fa;
+  color: #445074;
+}
+
+.cart-table td {
+  padding: 20px 10px;
+}
+
+.cart-table button {
+  padding: 6px 12px;
+  cursor: pointer;
+  border: none;
+  background-color: #81b3cd;
+  color: #fff;
+  border-radius: 6px;
+  margin: 0 5px;
+  transition: all 0.2s ease;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  font-size: 14px;
+  min-width: 32px;
+  display: inline-block;
+}
+
+.cart-table td span {
+  display: inline-block;
+  min-width: 30px;
+  margin: 0 8px;
+  font-weight: 400;
+}
+
+.cart-table button:hover {
+  background-color: #6a9eb8;
+  color: white;
+}
+
+.remove {
+  background-color: #c25b5b;
+}
+
+.remove:hover {
+  background-color: #a94a4a;
+}
+
+.cart-summary {
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  font-size: 14px;
+  text-align: right;
+  color: #6b7280;
+  font-weight: 300;
+}
+
+.cart-summary strong {
+  color: #445074;
+  font-weight: 400;
+}
+
+.cart-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.checkout {
+  background: #81b3cd;
+  border: 1px solid #81b3cd;
+  color: #ffffff;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  padding: 10px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-weight: 400;
+}
+
+.checkout:hover {
+  background-color: #6a9eb8;
+  border-color: #6a9eb8;
+  transform: translateY(-2px);
+}
+
+.clear {
+  background: transparent;
+  border: 1px solid #81b3cd;
+  color: #445074;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  padding: 10px 24px;
+  margin-left: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-weight: 400;
+}
+
+.clear:hover {
+  background-color: #81b3cd;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.empty-cart {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.empty-cart p {
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  color: #6b7280;
+  font-weight: 300;
+}
+
+.return {
+  background: #81b3cd;
+  border: 1px solid #81b3cd;
+  color: white;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  font-size: 12px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-weight: 400;
+}
+
+.return:hover {
+  background-color: #6a9eb8;
+  border-color: #6a9eb8;
+  transform: translateY(-2px);
+}
+
+.checkout-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  background: rgba(68, 80, 116, 0.5);
+  backdrop-filter: blur(4px);
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px 40px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(68, 80, 116, 0.3);
+  animation: fadeIn 0.3s ease forwards;
+  position: relative;
+  z-index: 1;
+}
+
+.modal-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto 20px auto;
+  background: transparent;
+}
+
+.modal-title {
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: #445074;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+}
+
+.modal-desc {
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 12px;
+  text-align: center;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.receipt-table {
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  color: #445074;
+}
+
+.receipt-table th,
+.receipt-table td {
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.receipt-table th {
+  border-bottom: 1px solid #e8ecf0;
+  letter-spacing: 0.5px;
+}
+
+.receipt-table td {
+  border-bottom: 1px solid #f5f7fa;
+}
+
+p {
+  margin: 5px 0;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 300;
+}
+
+p strong {
+  color: #445074;
+  font-weight: 400;
+}
+
+.modal-price {
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  color: #445074;
+  font-size: 1.05rem;
+  margin: 0.8rem 0 20px 0;
+  font-weight: 400;
+}
+
+button.confirm {
+  background: #81b3cd;
+  border: 1px solid #81b3cd;
+  color: #ffffff;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  padding: 10px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-top: 15px;
+  display: block;
+  margin: 15px auto 0 auto;
+  font-weight: 400;
+}
+
+button.confirm:hover {
+  background-color: #6a9eb8;
+  border-color: #6a9eb8;
+  transform: translateY(-2px);
+}
+
+button.confirm:active {
+  transform: translateY(0);
+  opacity: 0.9;
+}
+
+.close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #445074;
+  transition: color 0.2s ease;
+  background: transparent;
+  border: none;
+}
+
+.close:hover {
+  color: #81b3cd;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,19 @@
+<div class="lookbook-container">
+  <h2 class="lookbook-heading">My Works <br>Concrete Serenity</h2>
+  <p class="lookbook-subtitle">
+    Handcrafted with love and attention to detail
+  </p>
+
+  <div class="editorial-layout">
+    <div
+      class="editorial-item"
+      *ngFor="let look of looks"
+      (click)="toggleCaption(look)"
+    >
+      <img [src]="look.image" [alt]="look.caption" />
+      <div class="caption" [class.active]="look.showCaption">
+        <p>{{ look.caption }}</p>
+      </div>
+    </div>
+  </div>
+</div>

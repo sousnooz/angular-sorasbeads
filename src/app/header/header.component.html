@@ -1,0 +1,26 @@
+<header class="header">
+  <div class="header-container">
+    <!-- Logo/Brand -->
+    <div class="brand">
+      <a [routerLink]="['/']" class="brand-link">
+        <h1 class="brand-name">SorasBeads</h1>
+      </a>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li *ngFor="let menu of menus" class="nav-item">
+          <a [routerLink]="[menu.routerPath]" class="nav-link">
+            {{ menu.name }}
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Right Side Actions -->
+    <div class="header-actions">
+      <a [routerLink]="['/signin']" class="action-link">Sign In</a>
+    </div>
+  </div>
+</header>

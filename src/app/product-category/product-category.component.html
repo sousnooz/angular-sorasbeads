@@ -1,0 +1,64 @@
+<div class="container-fluid hero-contact p-0 m-0">
+  <h2 class="accent-underline">All products<sup>5</sup></h2>
+
+  <div class="newspaper">
+    <div
+      class="box"
+      *ngFor="let category of productsCategory"
+    >
+      <ng-container *ngFor="let prod of category.products">
+        <div class="product-card" (click)="openProductModal(prod)">
+          <img
+            class="productimg"
+            [src]="prod.imageFile && prod.imageFile.includes('/') ? prod.imageFile : 'assets/products/' + prod.imageFile + '.png'"
+            [alt]="prod.name"
+          />
+
+          <div class="details">
+            <p class="productname">{{ prod.name }}</p>
+            <p class="productcategory">{{ prod.description }}</p>
+            <p class="price">₱{{ prod.price }}</p>
+          </div>
+
+          <button
+            class="cart-btn"
+            type="button"
+            (click)="$event.stopPropagation(); openProductModal(prod)"
+          >
+            View Details
+          </button>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal"
+  [ngClass]="{ open: selectedProduct }"
+  (click)="closeProductModal($event)"
+>
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <span class="close" (click)="onCloseClick()">&times;</span>
+    <img
+      #zoomImage
+      class="zoomable"
+      [src]="selectedProduct ? (selectedProduct.imageFile && selectedProduct.imageFile.includes('/') ? selectedProduct.imageFile : 'assets/products/' + selectedProduct.imageFile + '.png') : ''"
+      [alt]="selectedProduct?.name"
+      (mousemove)="onImageHover($event, zoomImage)"
+      (mouseleave)="resetZoom(zoomImage)"
+      (click)="toggleZoom(zoomImage); $event.stopPropagation()"
+    />
+    <h3 class="modal-title">{{ selectedProduct?.name }}</h3>
+    <p class="modal-desc">{{ selectedProduct?.description }}</p>
+    <p class="modal-price">₱{{ selectedProduct?.price }}</p>
+
+    <button
+      class="cart-btn"
+      type="button"
+      (click)="selectedProduct && onAddToCart(selectedProduct)"
+    >
+      Add to Cart
+    </button>
+  </div>
+</div>

@@ -1,0 +1,224 @@
+/* Header Styles */
+.header {
+  width: 100%;
+  background: linear-gradient(to right, #7a9cc6 0%, #5c7fa3 50%, #4a6b8a 100%);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Brand/Logo */
+.brand {
+  flex-shrink: 0;
+}
+
+.brand-link {
+  text-decoration: none;
+  display: block;
+}
+
+.brand-name {
+  font-family: "Poppins", -apple-system, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.5px;
+  transition: opacity 0.3s ease;
+}
+
+.brand-link:hover .brand-name {
+  opacity: 0.9;
+}
+
+/* Main Navigation */
+.main-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: block;
+  padding: 12px 24px;
+  color: #ffffff;
+  text-decoration: none;
+ font-family: "Poppins", -apple-system, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Transparent by default, gradient on hover */
+.nav-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+}
+
+.nav-link:hover::before {
+  opacity: 1;
+}
+
+.nav-link:hover {
+  transform: translateY(-2px);
+}
+
+/* Active state */
+.nav-link.active {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.12) 100%);
+}
+
+/* Header Actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.action-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Poppins", -apple-system, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Transparent by default, gradient on hover */
+.action-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+}
+
+.action-link:hover::before {
+  opacity: 1;
+}
+
+.action-link:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .header-container {
+    padding: 16px 4%;
+    gap: 20px;
+  }
+
+  .brand-name {
+    font-size: 1.5rem;
+  }
+
+  .nav-list {
+    gap: 4px;
+  }
+
+  .nav-link {
+    padding: 10px 16px;
+    font-size: 0.95rem;
+  }
+
+  .action-link {
+    padding: 8px 16px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .brand {
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-nav {
+    order: 3;
+    width: 100%;
+  }
+
+  .nav-list {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .nav-link {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .header-actions {
+    gap: 8px;
+  }
+
+  .action-link {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 14px 4%;
+  }
+
+  .brand-name {
+    font-size: 1.3rem;
+  }
+
+  .nav-link,
+  .action-link {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+}
